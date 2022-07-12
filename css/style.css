@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-color:#9494d5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding:30px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+#countdown{
+    text-align:center;
+}
+.form {
+    padding: 10px 20px;
+}
+
+.form h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.form-field {
+    margin-bottom: 20px;
+
+}
+
+.form-field label {
+    display: block;
+    color: #777;
+    font-size:15px;
+    margin-bottom: 5px;
+}
+.form-field label span{
+    font-size: 85%;
+    color: var(--error-color);
+}
+.form-field input {
+    border: solid 2px #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    background:#f6f6f680;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+/*.form-field.success input {
+    border-color: var(--success-color);
+}
+*/
+
+.form-field small {
+    color: var(--error-color);
+}
+
+
+/* button */
+.form-field.btns{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
+}
+input.btn {
+    width: 100%;
+    padding: 12px 15px;
+    background: #3fdc32;
+    border: 0px;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    transition: ease-in .3s;
+    outline: none;
+    margin: 0;
+}
+.btn:hover {
+    background: #28ab1d;
+    cursor: pointer;
+}
+#reset{
+    background: grey;
+}
+.btn:focus {
+    outline: none;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#output_data div{
+    margin: 4px;
+}

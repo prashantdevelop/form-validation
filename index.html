@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+	<title>JavaScript Form Validation Demo</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/intlTelInput.css">
+	<script src="js/intlTelInput.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div class="container">
+	<div id="countdown"></div>
+	<form id="signup" class="form" method="post">
+		<h1>Sign Up</h1>
+		<div class="form-field">
+			<label for="user_name">Name <span>*</span></label>
+			<input type="text" name="user_name" id="user_name" autocomplete="off" placeholder="Name">
+			<small></small>
+		</div>
+
+		<div class="form-field">
+			<label for="user_email">Email <span>*</span></label>
+			<input type="text" name="email" id="user_email" autocomplete="off" placeholder="Email">
+			<small></small>
+		</div>
+
+		
+		<div class="form-field">
+			<label for="user_dob">DOB <span>*</span></label>
+			<input type="date" name="user_dob" id="user_dob" autocomplete="off" placeholder="DOB">
+			<small></small>
+		</div>
+
+		<div class="form-field">
+			<label for="user_address">Address <span>*</span></label>
+			<input type="text" name="user_address" id="user_address" autocomplete="off" placeholder="Address">
+			<small></small>
+		</div>
+		<div class="form-field">
+			<label for="user_phone">Phone <span>*</span></label>
+			<input type="number" name="user_phone" id="user_phone" autocomplete="off" placeholder="Phone" data-code oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength = "10">
+			<small></small>
+		</div>
+		<div class="form-field btns">
+			<input id="submit_btn" type="submit" value="Submit" class="btn">
+			<input id="reset" type="reset" value="Reset" class="btn">
+		</div>
+	</form>
+	<div id="output_data"></div>
+</div>
+<script src="js/public.js"></script>
+</body>
+</html>
